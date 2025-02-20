@@ -1,0 +1,8 @@
+CustomerFirstName,CustomerLastName,CustomerEmail,CustomerPhone
+Frank,Harris,frank.harris@email.com,7891234560
+Grace,Miller,grace.miller@email.com,234-5678-901
+Henry,Clark,henry.clark@email.com,567-8901-234
+Karen,Anderson,karen.anderson@email.com,6789012345
+Leo,Martinez,leo.martinez@email.com,901-2345-678
+Nathan,Rodriguez,nathan.rodriguez@email.com,2233445566
+Paul,Walker,paul.walker@email.com,445-566-77

@@ -1,0 +1,1556 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/17/2025 8:48:42 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DEA2025"
+  DTS:CreatorName="DEA2025\girum"
+  DTS:DTSID="{7041CD65-6E83-4414-B276-231C386ED238}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{FC8F18BA-BB1B-4BAC-9141-FC37D9C2A1B5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Data Connection2]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{87389E92-9DCD-4F97-BD77-9F632472B714}"
+      DTS:ObjectName="Data Connection2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Use Encryption for Data=Optional;Trust Server Certificate=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DEA2025\GMSSQLSERVER_DEV.tempdb]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{67890A75-7E42-43B0-B2CA-35F87DBBBAE2}"
+      DTS:ObjectName="DEA2025\GMSSQLSERVER_DEV.tempdb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DEA2025\GMSSQLSERVER_DEV;Initial Catalog=tempdb;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Use Encryption for Data=Optional;Trust Server Certificate=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DEA2025\GMSSQLSERVER_DEV.tempdb 1]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{24CBE9B6-9B2C-410D-8409-15A64EF63BFC}"
+      DTS:ObjectName="DEA2025\GMSSQLSERVER_DEV.tempdb 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DEA2025\GMSSQLSERVER_DEV;Initial Catalog=tempdb;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Use Encryption for Data=Optional;Trust Server Certificate=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DEA2025\GMSSQLSERVER_DEV.tempdb1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{22D95C64-A41C-496A-A3C4-13D3C6BD17EC}"
+      DTS:ObjectName="DEA2025\GMSSQLSERVER_DEV.tempdb1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DEA2025\GMSSQLSERVER_DEV;Initial Catalog=tempdb;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{22D95C64-A41C-496A-A3C4-13D3C6BD17EC}DEA2025\GMSSQLSERVER_DEV.tempdb1;Use Encryption for Data=Optional;Trust Server Certificate=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C46103FF-DB85-4531-AAFA-56C726C37D67}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Data\ValidData.csv.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerFirstName"
+              DTS:DTSID="{AA162F2E-B5A2-436E-8733-4D9B7D192033}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerLastName"
+              DTS:DTSID="{F4108A1B-6E28-44A5-997D-CE6DFC6395E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerEmail"
+              DTS:DTSID="{D4BEB5EB-9A86-41A7-B08A-CB2AE90EB6C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerPhone"
+              DTS:DTSID="{10042584-8E04-4464-8D24-2A9C712A674D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B0B18612-6AC2-4C18-8E23-CF32323B774C}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Data\BadData.csv.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerFirstName"
+              DTS:DTSID="{713F8C17-B3B2-4349-B6BC-AA418D35F09D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerLastName"
+              DTS:DTSID="{9AF57300-5010-4A10-8657-066A8A34B2F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerEmail"
+              DTS:DTSID="{13918970-FC48-4C37-AC10-E4639CD4736D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerPhone"
+              DTS:DTSID="{B02C310A-6AB2-4973-82D7-E309382DD8A2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[test1]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{488431B5-C1E7-4101-A8DA-34AB11A81E75}"
+      DTS:ObjectName="test1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DEA2025\GMSSQLSERVER_DEV;Integrated Security=SSPI;Connect Timeout=30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{809AC9A8-6EA0-4994-8395-63865DDC6683}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute T-SQL Statement Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{93BCD41D-B741-45B7-85E6-665E7BC8D742}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute T-SQL Statement Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{22D95C64-A41C-496A-A3C4-13D3C6BD17EC}"
+              SQLTask:SqlStatementSource="If (object_id('CustStaging_ValidPhones') is not null)&#xA;  Drop Table CustStaging_ValidPhones;&#xA;Go&#xA;&#xA;Create Table CustStaging_ValidPhones&#xA;(CustomersStaging int identity Primary Key&#xA;,CustomerFirstName nvarchar(100)&#xA;,CustomerLastName nvarchar(100)&#xA;,CustomerEmail nvarchar(100)&#xA;,CustomerPhone nvarchar(100) );&#xA;&#xA;Go&#xA;&#xA;If (object_id('CustStaging_InValidPhones') is not null)&#xA;  Drop Table CustStaging_InValidPhones;&#xA;Go&#xA;&#xA;Create Table CustStaging_InValidPhones&#xA;(CustomersStaging int identity Primary Key&#xA;,CustomerFirstName nvarchar(100)&#xA;,CustomerLastName nvarchar(100)&#xA;,CustomerEmail nvarchar(100)&#xA;,CustomerPhone nvarchar(100) );" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Load Data into Staging Tables Data Flow"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{8FD0B3B5-1AB8-43FD-9298-89489B153EEA}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Data into Staging Tables Data Flow"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="ADO NET Destination"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[dbo].[CustStaging_ValidPhones]</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DEA2025\GMSSQLSERVER_DEV.tempdb]"
+                      connectionManagerRefId="Package.ConnectionManagers[DEA2025\GMSSQLSERVER_DEV.tempdb]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[CustomerPhone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerPhone"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerPhone]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[CustomerFirstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerFirstName"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerFirstName]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[CustomerLastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerLastName"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerLastName]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[CustomerEmail]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerEmail"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerEmail]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomersStaging]"
+                          dataType="i4"
+                          name="CustomersStaging" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerFirstName]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerFirstName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerLastName]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerLastName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerEmail]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerEmail" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CustomerPhone]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerPhone" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="ADO NET Destination 1"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[dbo].[CustStaging_InValidPhones]</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DEA2025\GMSSQLSERVER_DEV.tempdb 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[DEA2025\GMSSQLSERVER_DEV.tempdb 1]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].Columns[CustomerPhone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerPhone"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerPhone]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].Columns[CustomerFirstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerFirstName"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerFirstName]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].Columns[CustomerLastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerLastName"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerLastName]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].Columns[CustomerEmail]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerEmail"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerEmail]"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomersStaging]"
+                          dataType="i4"
+                          name="CustomersStaging" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerFirstName]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerFirstName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerLastName]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerLastName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerEmail]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerEmail" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input].ExternalColumns[CustomerPhone]"
+                          dataType="wstr"
+                          length="100"
+                          name="CustomerPhone" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[CustomerPhone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerPhone"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[CustomerFirstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerFirstName"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[CustomerLastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerLastName"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[CustomerEmail]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerEmail"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerPhone]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerPhone]"
+                          name="Copy of CustomerPhone"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerFirstName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerFirstName]"
+                          name="Copy of CustomerFirstName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerLastName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerLastName]"
+                          name="Copy of CustomerLastName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerEmail]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomerEmail]"
+                          name="Copy of CustomerEmail"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input].Columns[CustomerPhone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerPhone"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input].Columns[CustomerFirstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerFirstName"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input].Columns[CustomerLastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerLastName"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input].Columns[CustomerEmail]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerEmail"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerPhone]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerPhone]"
+                          name="Copy of CustomerPhone"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerFirstName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerFirstName]"
+                          name="Copy of CustomerFirstName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerLastName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerLastName]"
+                          name="Copy of CustomerLastName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerEmail]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of CustomerEmail]"
+                          name="Copy of CustomerEmail"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="InValid Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerPhone]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]"
+                          name="CustomerPhone"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerFirstName]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]"
+                          name="CustomerFirstName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerLastName]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]"
+                          name="CustomerLastName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerEmail]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]"
+                          name="CustomerEmail"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerFirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerFirstName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerLastName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerLastName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerEmail]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerEmail" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerPhone]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerPhone" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="valid  Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerPhone]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerPhone]"
+                          name="CustomerPhone"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerFirstName]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerFirstName]"
+                          name="CustomerFirstName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerLastName]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerLastName]"
+                          name="CustomerLastName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerEmail]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].Columns[CustomerEmail]"
+                          name="CustomerEmail"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerFirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerFirstName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerLastName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerLastName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerEmail]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerEmail" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CustomerPhone]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerPhone" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Data Conversion Output]"
+                  endId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Data Conversion Output1]"
+                  endId="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1.Inputs[ADO NET Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Flat File Source Output1]"
+                  endId="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Split Valid and Invalid data with PowerShell Execute Process Task"
+          DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:Description="Execute Process Task"
+          DTS:DTSID="{8D977010-AB88-4640-92D4-52C4FA6D9B58}"
+          DTS:ExecutableType="Microsoft.ExecuteProcess"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Split Valid and Invalid data with PowerShell Execute Process Task"
+          DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecuteProcessData
+              Executable="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+              Arguments="C:\Data\PhoneNoValidatorAndProcessor.ps1" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Split valid and Invalid data with Python Exceute process Task"
+          DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:Description="Execute Process Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{66360D02-8FDD-461C-A16C-294FA8F18A85}"
+          DTS:ExecutableType="Microsoft.ExecuteProcess"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Split valid and Invalid data with Python Exceute process Task"
+          DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecuteProcessData
+              Executable="C:\Users\girum\AppData\Local\Programs\Python\Python313\python.exe"
+              Arguments="C:\Data\PhoneNoValidatorAndProcessor.py" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{25D5D744-7297-4345-B811-B144CFC86CDE}"
+          DTS:From="Package\Sequence Container\Split valid and Invalid data with Python Exceute process Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container\Execute T-SQL Statement Task" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{B7DFC60F-CD61-4104-BD9B-DA3FA694DB43}"
+          DTS:From="Package\Sequence Container\Execute T-SQL Statement Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Sequence Container\Load Data into Staging Tables Data Flow" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{56225D30-C01D-462D-9266-EA3E2C13663D}"
+          DTS:From="Package\Sequence Container\Split Valid and Invalid data with PowerShell Execute Process Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Sequence Container\Execute T-SQL Statement Task" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="283.2,46.4"
+          Id="Package\Sequence Container\Execute T-SQL Statement Task"
+          TopLeft="539.228572336326,125.588235096381" />
+        <NodeLayout
+          Size="279.2,47.2"
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow"
+          TopLeft="542.02857312396,272.411764379449" />
+        <NodeLayout
+          Size="388.8,47.2"
+          Id="Package\Sequence Container\Split Valid and Invalid data with PowerShell Execute Process Task"
+          TopLeft="6.97142863224954,218.329411535465" />
+        <NodeLayout
+          Size="378.4,44.8"
+          Id="Package\Sequence Container\Split valid and Invalid data with Python Exceute process Task"
+          TopLeft="9.88571484830916,23.8823528325888" />
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="199.085714848309,68.6823528325888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="481.742857488017,56.9058822637923"
+              Start="0,0"
+              End="481.742857488017,49.4058822637923">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.4529411318961" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.4529411318961"
+                    Point2="0,28.4529411318961"
+                    Point3="4,28.4529411318961" />
+                  <mssgle:LineSegment
+                    End="477.742857488017,28.4529411318961" />
+                  <mssgle:CubicBezierSegment
+                    Point1="477.742857488017,28.4529411318961"
+                    Point2="481.742857488017,28.4529411318961"
+                    Point3="481.742857488017,32.4529411318961" />
+                  <mssgle:LineSegment
+                    End="481.742857488017,49.4058822637923" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="726.695239002993,171.988235096381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-45.0666658790333,100.423529283068"
+              Start="0,0"
+              End="-45.0666658790333,92.9235292830679">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5079179917094" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5079179917094"
+                    Point2="0,40.5079179917094"
+                    Point3="-4,40.5079179917094" />
+                  <mssgle:LineSegment
+                    End="-41.0666658790333,40.5079179917094" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-41.0666658790333,40.5079179917094"
+                    Point2="-45.0666658790333,40.5079179917094"
+                    Point3="-45.0666658790333,44.5079179917094" />
+                  <mssgle:LineSegment
+                    End="-45.0666658790333,92.9235292830679" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="201.37142863225,218.329411535465">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="433.59047703741,-46.3411764390839"
+              Start="0,0"
+              End="433.59047703741,-38.8411764390839">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23.6484996507343" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.6484996507343"
+                    Point2="0,-27.6484996507343"
+                    Point3="4,-27.6484996507343" />
+                  <mssgle:LineSegment
+                    End="429.59047703741,-27.6484996507343" />
+                  <mssgle:CubicBezierSegment
+                    Point1="429.59047703741,-27.6484996507343"
+                    Point2="433.59047703741,-27.6484996507343"
+                    Point3="433.59047703741,-31.6484996507343" />
+                  <mssgle:LineSegment
+                    End="433.59047703741,-38.8411764390839" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="924.8,513.6"
+          Size="924.8,556.8"
+          Id="Package\Sequence Container"
+          TopLeft="21.4285714741872,29.8235293856232" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Load Data into Staging Tables Data Flow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="255.2,50.4"
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion 1"
+          TopLeft="400.999994024635,200.235291123184" />
+        <NodeLayout
+          Size="273.6,68.8"
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow\valid  Flat File Source"
+          TopLeft="33.8000035315752,54.9999991804361" />
+        <NodeLayout
+          Size="272.8,57.6"
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow\Data Conversion"
+          TopLeft="34.2000035315752,195.999997079372" />
+        <NodeLayout
+          Size="279.2,52.8"
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1"
+          TopLeft="397.999994069338,312.999995335937" />
+        <NodeLayout
+          Size="259.2,56"
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination"
+          TopLeft="41.0000035315753,313.999995321035" />
+        <NodeLayout
+          Size="250.4,63.2"
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow\InValid Flat File Source"
+          TopLeft="406.999993935228,59.9999991059303" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Flat File Source Output1]"
+          TopLeft="530.399993979932,123.19999910593">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.0352920172541"
+              Start="0,0"
+              End="0,69.5352920172541">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.5352920172541" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Flat File Source Output]"
+          TopLeft="170.600003531575,123.799999180436">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.1999978989363"
+              Start="0,0"
+              End="0,64.6999978989363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.6999978989363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Data Conversion Output1]"
+          TopLeft="528.599994024635,250.635291123184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.00000004470292,62.3647042127526"
+              Start="0,0"
+              End="9.00000004470292,54.8647042127526">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1823521063763" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.1823521063763"
+                    Point2="0,31.1823521063763"
+                    Point3="4,31.1823521063763" />
+                  <mssgle:LineSegment
+                    End="5.00000004470292,31.1823521063763" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.00000004470292,31.1823521063763"
+                    Point2="9.00000004470292,31.1823521063763"
+                    Point3="9.00000004470292,35.1823521063763" />
+                  <mssgle:LineSegment
+                    End="9.00000004470292,54.8647042127526" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Load Data into Staging Tables Data Flow.Paths[Data Conversion Output]"
+          TopLeft="170.600003531575,253.599997079372">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.3999982416629"
+              Start="0,0"
+              End="0,52.8999982416629">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.8999982416629" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Load Data into Staging Tables Data Flow\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,14 @@
+CustomerFirstName,CustomerLastName,CustomerEmail,CustomerPhone
+Alice,Johnson,alice.johnson@email.com,123-456-7890
+Bob,Smith,bob.smith@email.com,987-654-3210
+Charlie,Brown,charlie.brown@email.com,456-789-1234
+David,Wilson,david.wilson@email.com,654-321-9876
+Emma,Thompson,emma.thompson@email.com,321-654-9870
+Isabella,Walker,isabella.walker@email.com,890-123-4567
+Jack,Lopez,jack.lopez@email.com,345-678-9012
+Mia,Gonzalez,mia.gonzalez@email.com,112-233-4455
+Olivia,Lee,olivia.lee@email.com,334-455-6677
+Quinn,Hall,quinn.hall@email.com,556-677-8899
+Rachel,Allen,rachel.allen@email.com,667-788-9900
+Samuel,Young,samuel.young@email.com,778-899-0011
+Tina,Wright,tina.wright@email.com,889-900-1122

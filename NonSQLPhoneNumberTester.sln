@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "NonSQLPhoneNumberTester", "NonSQLPhoneNumberTester\NonSQLPhoneNumberTester.dtproj", "{82C58A1B-B2B5-47D5-A827-F4C0C6E5C30B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{DF861ACB-5263-4FA1-AD52-20445E02EC65}"
+	ProjectSection(SolutionItems) = preProject
+		Data\BadData.csv.txt = Data\BadData.csv.txt
+		Data\TestData.csv.txt = Data\TestData.csv.txt
+		Data\ValidData.csv.txt = Data\ValidData.csv.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{A0092715-B7B4-40EE-87EC-59D5AA2C0295}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\CodeForSSISStagingTable.sql = Scripts\CodeForSSISStagingTable.sql
+		Scripts\PhoneNoValidatorAndProcessor.ps1 = Scripts\PhoneNoValidatorAndProcessor.ps1
+		Scripts\PhoneNoValidatorAndProcessor.py = Scripts\PhoneNoValidatorAndProcessor.py
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{90B026CC-99AE-4CBF-B26C-A423F0484AB7}"
+	ProjectSection(SolutionItems) = preProject
+		Document\A05_Manual_Girum.pdf = Document\A05_Manual_Girum.pdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82C58A1B-B2B5-47D5-A827-F4C0C6E5C30B}.Development|Default.ActiveCfg = Development
+		{82C58A1B-B2B5-47D5-A827-F4C0C6E5C30B}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {129C81D8-A490-4A2A-9F98-782AFCF882A3}
+	EndGlobalSection
+EndGlobal
