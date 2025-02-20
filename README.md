@@ -1,27 +1,25 @@
-#ETL Workflow for Phone Number Validation
 
-Overview
+# ETL Workflow for Phone Number Validation
+
+## Overview
 
 This ETL workflow extracts, validates, and loads phone number data from a CSV file into SQL Server using SSIS. It ensures data integrity by separating valid and invalid records.
 
-Steps
+## Steps
 
-Extract: Load data from TestData.csv.
+1. **Extract**: Load data from TestData.csv.
+2. **Transform**: Validate phone numbers (format 111-222-3333).
+3. **Load**: Store valid records in SQL Server; log invalid records separately.
 
-Transform: Validate phone numbers (format 111-222-3333).
+## Technologies Used
 
-Load: Store valid records in SQL Server; log invalid records separately.
+- **SQL Server**
+- **SSIS**
+- **Python & PowerShell** (for automation)
 
-Technologies Used
+## Table Schema
 
-SQL Server
-
-SSIS
-
-Python & PowerShell (for automation)
-
-Table Schema
-
+```sql
 CREATE TABLE CustomersStaging (
     ID INT IDENTITY PRIMARY KEY,
     FirstName NVARCHAR(100),
@@ -29,21 +27,19 @@ CREATE TABLE CustomersStaging (
     Email NVARCHAR(100),
     Phone NVARCHAR(100)
 );
+```
 
-Execution
+## Execution
 
-SSIS package automates the ETL process.
+- **SSIS** package automates the ETL process.
+- **Python & PowerShell** scripts handle execution tasks.
 
-Python & PowerShell scripts handle execution tasks.
+## Benefits
 
-Benefits
+- Ensures consistent and valid phone number data.
+- Automates data processing with SSIS.
+- Provides structured logging of invalid records.
 
-Ensures consistent and valid phone number data.
-
-Automates data processing with SSIS.
-
-Provides structured logging of invalid records.
-
-Summary
+## Summary
 
 This workflow improves data quality, reduces manual errors, and automates phone number validation.
